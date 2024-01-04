@@ -1,0 +1,60 @@
+﻿@model WirelessIzmir
+@{
+    ViewData["Title"] = "WirelessIzmirLocations";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h4 style="color:red;font-weight: bold;">NOT = GOOGLE MAPS'DEN ENLEM VE BOYLAM GİRİLEREK WIRELESS YERİNE ULAŞILABİLİR. ÖRNEK: 38.397402925912, 27.078321500265 ŞEKLİNDE GOOGLE MAPS'DEN ARAYINIZ.</h4>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    
+                    <th scope="col">İLÇE</th>
+                    <th scope="col">MAHALLE</th>
+                    <th scope="col">WIRELESS YERİ</th>
+                    <th scope="col">ENLEM</th>
+                    <th scope="col">BOYLAM</th>
+
+                    
+                </tr>
+            </thead>
+
+            <tbody id="tablepharmacy">
+
+                @foreach (var item in Model.onemliyer)
+
+                {
+
+                    <tr>
+                        
+                        <td>@item.ILCE</td>
+                        <td>@item.MAHALLE</td>
+                        <td>@item.ADI</td>
+                        <td>@item.ENLEM</td>
+                        <td>@item.BOYLAM</td>
+
+                    </tr>
+
+
+
+                }
+
+
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
